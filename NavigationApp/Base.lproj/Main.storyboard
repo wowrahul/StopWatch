@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9G-Og-dV2">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Stop Watch" id="eeX-Hy-vCJ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="Tps-Yu-ko9">
+                                            <connections>
+                                                <action selector="Pause:" destination="BYZ-38-t0r" id="4m4-hh-KDp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqg-NF-Kge">
+                                <rect key="frame" x="96" y="247" width="129" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77c-iD-56I">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="uzi-Ld-bHa">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="xEO-QD-ngX">
+                                            <connections>
+                                                <action selector="Stop:" destination="BYZ-38-t0r" id="fk6-Pe-Cox"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="5Ev-Gw-K8d">
+                                            <connections>
+                                                <action selector="Play:" destination="BYZ-38-t0r" id="aHA-dm-VfT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="77c-iD-56I" secondAttribute="trailing" constant="-16" id="3fs-uM-qwl"/>
+                            <constraint firstAttribute="centerX" secondItem="k9G-Og-dV2" secondAttribute="centerX" id="AfF-sN-OhC"/>
+                            <constraint firstItem="k9G-Og-dV2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="G0j-ty-NX9"/>
+                            <constraint firstAttribute="centerX" secondItem="77c-iD-56I" secondAttribute="centerX" id="GeR-Tx-zG0"/>
+                            <constraint firstItem="77c-iD-56I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Gra-T0-t6F"/>
+                            <constraint firstAttribute="centerY" secondItem="oqg-NF-Kge" secondAttribute="centerY" id="Mk2-Eb-jjd"/>
+                            <constraint firstAttribute="centerX" secondItem="oqg-NF-Kge" secondAttribute="centerX" id="bA4-MN-A3n"/>
+                            <constraint firstItem="k9G-Og-dV2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="erX-dW-eRT"/>
+                            <constraint firstItem="77c-iD-56I" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="j4c-Za-qzq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k9G-Og-dV2" secondAttribute="trailing" constant="-16" id="lgq-OB-LmU"/>
+                            <constraint firstItem="k9G-Og-dV2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xRi-wr-WhA"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="lblTime" destination="oqg-NF-Kge" id="KPG-WN-LfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="190"/>
+        </scene>
+    </scenes>
+</document>
